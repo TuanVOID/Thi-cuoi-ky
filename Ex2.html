@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+
+  function tryRemoveFromArray() {
+      let arr = [];
+      let n = prompt("nhap vao so luong cac phan tu");
+      for (let i = 0; i < n; i++) {
+          let a = prompt("Phan tu tai index " + i + ": ");
+          arr[i] = a;
+      }
+      let x = +prompt(" Nhap vao index can xoa ");
+      if (x<0 && x> (arr.length-1)) {
+          alert("Index khong hop le");
+      } else {
+          for (let i = x; i <= arr.length -1 ; i++) {
+              arr[i] = arr[i+1];
+          }
+          arr.length = arr.length -1;
+          return arr;
+      }
+  }
+
+  console.log(tryRemoveFromArray())
+  //     arr[x]
+</script>
+</body>
+</html>

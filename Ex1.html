@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let numbers = [-3, 5, 8, 19, 22, 4, 7];
+    let max = numbers[0];
+    let index = 0;
+    for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i]
+                index = i;
+            }
+    }
+    //So lon nhat trong mang
+    numbers[index] = numbers[0];
+    let index2 = 0;
+    let max2 = numbers[0]
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > max2) {
+             max2 = numbers[i]
+             index2 = i;
+        }
+    }
+    // so lon thu 2 trong mang
+    numbers[index2] = numbers[index];
+    let index3 = 0;
+    let max3 = numbers[0]
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > max3) {
+            max3 = numbers[i]
+            index3 = i;
+        }
+    }
+    alert(`So lon thu 3 trong mang la ${numbers[index3]} tai index = ${index3}`)
+
+
+</script>
+</body>
+</html>
